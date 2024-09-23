@@ -1,0 +1,6 @@
+FROM satyajitghana/pytorch:2.3.1
+
+WORKDIR /workspace
+COPY evaluate.py check_eval.py /workspace/
+
+CMD ["python", "evaluate.py"]
