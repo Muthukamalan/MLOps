@@ -4,7 +4,6 @@ from datum import DogsDATAClassifier
 from models import DogsClassifier
 from utils.utils import show_batch,visualize_model
 from lightning.pytorch import loggers as pl_loggers
-from functorch.compile import compiled_function,draw_graph
 from lightning.pytorch.profilers import PyTorchProfiler
 from lightning.pytorch.callbacks import (
     DeviceStatsMonitor,
@@ -16,7 +15,7 @@ from lightning.pytorch.callbacks import (
 from lightning.pytorch.callbacks.progress import TQDMProgressBar
 import lightning as pl 
 
-
+pl.seed_everything(3,workers=True)
 
 with open( os.path.join(os.path.dirname(__file__),'config','configs.yaml') ) as f:
     config = yaml.safe_load(f)

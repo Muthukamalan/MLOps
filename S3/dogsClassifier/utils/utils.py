@@ -1,7 +1,7 @@
 from torchvision.utils import make_grid
 import torch 
-from IPython import display
-from IPython.display import Image
+# from IPython import display
+# from IPython.display import Image
 
 
 # Visualization: Dataset sample
@@ -24,4 +24,4 @@ def visualize_model(model):
     y = model(x)
     dot = make_dot(y, params=dict(model.named_parameters()))
     dot.render("model_architecture", format="png")
-    display(Image("model_architecture.png"))
+    # display(Image("model_architecture.png"))

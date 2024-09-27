@@ -1,14 +1,14 @@
 DATA:
-  PATH: /home/muthu/GitHub/MLOps/S3/dogsClassifier/ #/home/muthu/GitHub/DATA 📁/
+  PATH: . #/home/muthu/GitHub/DATA 📁/
   folder_name: dogs_dataset
   num_workers: 0
-  batch_size: 32
+  batch_size: 16
 
 MODEL:
   name: resnet18
   pretrain: true
   num_class: 10
-  lr: 0.04
+  lr: 0.01
   
 Training:
   num_epochs: 15
