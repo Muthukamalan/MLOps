@@ -1,0 +1,18 @@
+# Config is hierarchical
+name: node
+loompa: 10                  # Simple value
+zippity: ${web.loompa}     # Value interpolation
+do: "oompa ${web.loompa}"  # String interpolation
+waldo: ???                  # Missing value, must be populated prior to access
+timout: 1e-4
+firewall: "run ${web.timout}"  # String interpolation
+
+
+# web = {
+#     loompa = 10
+#     timeout = .00004
+#     do = "oompa 10"
+#     zippity =  10
+#     firewall = "run 1e-4" 
+#     waldo   = ??                    # assign before you run
+# }

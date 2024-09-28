@@ -1,0 +1,12 @@
+defaults:
+  - db: mysql
+  - ui: windows
+  - schema: school
+  - _self_
+
+
+trainer:
+  gpu: yes
+  speed: interval(0,100)
+
+ui: linux   # override state not Entire File

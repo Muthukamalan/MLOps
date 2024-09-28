@@ -1,0 +1,19 @@
+car:
+  _target_: app.Car
+  driver:
+    _target_: app.Driver
+    name: muthu
+    age: 27
+  wheel:
+    - _target_: app.Wheel
+      r: 20 
+      w: 1
+    - _target_: app.Wheel
+      r: 20 
+      w: 1
+    - _target_: app.Wheel
+      r: 20 
+      w: 1
+    - _target_: app.Wheel
+      r: 20 
+      w: 1

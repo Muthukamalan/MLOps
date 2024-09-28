@@ -1,0 +1,4 @@
+driver: mysql  # db/mysql.yaml
+pass: secret   # db/mysql.yaml 
+user: root     # config.yaml
+variable: ${hydra:runtime.cwd}

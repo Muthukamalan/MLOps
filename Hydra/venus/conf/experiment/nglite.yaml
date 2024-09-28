@@ -1,0 +1,7 @@
+# @package _global_
+defaults:
+  - override /db: sqlite
+  - override /server: nginx
+  
+server:
+  port: 8081

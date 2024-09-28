@@ -1,0 +1,6 @@
+defaults:
+  - _self_          # loads db:user=muthukamalan
+  - db: mysql       # db OVERRIDES
+
+db:
+  user: muthukamalan

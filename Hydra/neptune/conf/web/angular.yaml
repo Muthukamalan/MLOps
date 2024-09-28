@@ -1,0 +1,14 @@
+# Config is hierarchical
+name: angular
+timout: 10                  # Simple value
+zippity: ${web.timout}     # Value interpolation
+firewall: "run ${web.timout}"  # String interpolation
+waldo: ???                  # Missing value, must be populated prior to access
+
+
+# web = {
+#     timeout = 10
+#     zippity =  10
+#     firewall = "run 10" 
+#     waldo   = ??                    # assign before you run
+# }

@@ -1,0 +1,6 @@
+trainer:
+  _target_: app.Trainer
+  optimizer: 
+    _target_: app.Optimizer
+    algo: SGD
+    lr: 0.01

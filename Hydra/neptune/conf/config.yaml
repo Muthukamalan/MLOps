@@ -1,0 +1,10 @@
+defaults:                       # defaults it should be list of mapping
+
+
+  - db: mysql
+  - web: node                       
+      
+
+
+trainer:
+  gpu: 1

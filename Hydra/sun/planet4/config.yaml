@@ -1,0 +1,6 @@
+model: 
+  _target_: app.Model
+  optimizers:                      # functional programming "curry"
+    _partial_: true
+    _target_: app.Optimizer
+    algo: sgd

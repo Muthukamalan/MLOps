@@ -1,0 +1,7 @@
+defaults:
+  - db: ???
+  - _self_
+hydra:
+  sweeper:
+    params:
+      db: glob(*)

@@ -1,0 +1,4 @@
+_target_: app.PostgresSQLConnection
+host: pgsql
+user: pgadmin
+password: root 

@@ -1,0 +1,4 @@
+_target_: app.MySQLConnection
+host: mysql
+user: admin
+password: admin

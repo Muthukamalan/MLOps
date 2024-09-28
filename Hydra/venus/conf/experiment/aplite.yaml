@@ -1,0 +1,6 @@
+# @package _global_
+defaults:
+  - override /db: sqlite
+
+server:
+  port: 8080

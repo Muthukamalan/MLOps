@@ -1,0 +1,4 @@
+- [ ] extending configs
+- [X] configuring experiment # @package _global_
+- [ ] multiple configs from a config group
+- [ ] specializing configuration

@@ -1,0 +1,7 @@
+defaults:
+  - db: mysql              # db.user=root loads properly
+  - _self_                 # db.user=muthu OVVERRIDEs 
+
+db:
+  user: muthukamalan
+
