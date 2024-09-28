@@ -1,0 +1,19 @@
+# MLOps Basics
+- [X]	**Introduction to MLOps** An overview of MLOps (Machine Learning Operations), covering the best practices and tools to manage, deploy, and maintain machine learning models in production.
+- [X]	**Docker - I**	A hands-on session on creating Docker containers from scratch and an introduction to Docker, the containerization platform, and its core concepts.
+- [X]	**Docker - II**	An introduction to Docker Compose, a tool for defining and running multi-container Docker applications, with a focus on deploying machine learning applications.
+- [X]	**PyTorch Lightning - I**	An overview of PyTorch Lightning, a PyTorch wrapper for high-performance training and deployment of deep learning models, and a project setup session using PyTorch Lightning.
+- [ ]	**PyTorch Lightning - II**	Learn to build sophisticated ML projects effortlessly using PyTorch Lightning and Hydra, combining streamlined development with advanced functionality for seamless model creation and deployment.
+- [ ]	**Data Version Control (DVC)**	Data Version Control (DVC), a tool for managing machine learning data and models, including versioning, data and model management, and collaboration features.
+- [ ]	**Experiment Tracking & Hyperparameter Optimization**	A session covering various experiment tracking tools such as Tensorboard, MLFlow and an overview of Hyperparameter Optimization techniques using Optuna and Bayesian Optimization.
+- [ ]	**AWS Crash Course**	A session on AWS, covering EC2, S3, ECS, ECR, and Fargate, with a focus on deploying machine learning models on AWS.
+- [ ]	**Model Deployment w/ FastAPI**	A hands-on session on deploying machine learning models using FastAPI, a modern, fast, web framework for building APIs.
+- [ ]	**Model Deployment for Demos**	Gradio, an open-source platform for creating and sharing demos of machine learning models, and a session on Model Tracing.
+- [ ] **Model Deployment on Serverless**	An overview of Serverless deployment of machine learning models, including an introduction to AWS Lambda
+- [ ] **Model Deployment w/ TorchServe**	An introduction to TorchServe, a PyTorch model serving library, and a hands-on session on deploying machine learning models using TorchServe.
+- [ ] **Kubernetes - I**	This session provides an introduction to Kubernetes, a popular container orchestration platform, and its key concepts and components.
+- [ ] **Kubernetes - II**	In this session, participants will learn how to monitor and configure Kubernetes clusters for machine learning workloads.
+- [ ] **Kubernetes - III**	This session will cover introduction to EKS, Kubernetes Service on AWS, Deploying a FastAPI - PyTorch Kuberentes Service on EKS
+- [ ] **Kubernetes - IV**	This session covers EBS Volumes, ISTIO and KServe, learning to deploy pytorch models on KServe
+- [ ] **Canary Deployment & Monitoring**	This session covers how to deploy models with Canary Rollout Strategy while monitoring it on Prometheus and Grafana
+- [ ] **Capstone**	This session is a final project where participants will apply the knowledge gained throughout the course to develop and deploy an end-to-end MLOps pipeline.
