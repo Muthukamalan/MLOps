@@ -1,0 +1,4 @@
+dogs_dataset/
+# *.env
+logs/
+outputs/
