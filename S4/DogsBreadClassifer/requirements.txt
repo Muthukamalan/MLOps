@@ -1,0 +1,31 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+# --------- pytorch --------- #
+timm==1.0.9
+torch==2.4.0+cpu 
+torchvision==0.19.0+cpu
+lightning==2.4.0
+torchmetrics==1.4.1
+tensorboard==2.17.1
+tensorboardX==2.6.2.2
+
+# --------- hydra --------- #
+hydra-core==1.2.0
+hydra-colorlog==1.2.0
+# hydra-optuna-sweeper==1.2.0
+
+# --------- loggers --------- #
+# wandb
+# neptune-client
+# mlflow
+# comet-ml
+
+# --------- others --------- #
+kaggle          # loading kaggle dataset
+pyrootutils     # standardizing the project root setup
+rootutils
+loguru          # hydra logs
+rich            # beautiful text formatting in terminal
+
+
+
+

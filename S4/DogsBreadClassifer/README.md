@@ -1,9 +1,9 @@
 # Dosg Bread Classifier
 
 # TODO:
-- [ ] pyproject.toml
-- [ ] Dockerfile
-- [ ] .devcontainer
+- [X] ~pyproject.toml~ requirements.txt
+- [X] Dockerfile
+- [X] .devcontainer
 - [ ] codecov
 - [ ] Docker Image to GHCR
 - [ ] fail if accuracy<.95 

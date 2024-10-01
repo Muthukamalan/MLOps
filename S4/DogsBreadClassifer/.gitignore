@@ -1,4 +1,5 @@
 dogs_dataset/
-# *.env
+*.env
 logs/
 outputs/
+__pycache__/
