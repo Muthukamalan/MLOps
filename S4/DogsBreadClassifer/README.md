@@ -1,13 +1,16 @@
-# Dosg Bread Classifier
+# Dogs Bread Classifier
 
-# TODO:
+# Implementations TODOs:
 - [X] ~pyproject.toml~ requirements.txt
 - [X] Dockerfile
 - [X] .devcontainer
-- [ ] codecov
-- [ ] Docker Image to GHCR
+- [X] pytest 
+- [X] codecov  
+- [X] Docker Image to GHCR
 - [ ] fail if accuracy<.95 
-- [ ] store artifact
+- [X] store artifact
+
+
 
 ### [Dogs Dataset](https://www.kaggle.com/datasets/khushikhushikhushi/dog-breed-image-dataset)
 In Order to run program successfully, modification `.env` file
@@ -15,12 +18,12 @@ In Order to run program successfully, modification `.env` file
 ![kaggle key](./assets/kaggle_key.png)
 - create new key
 - paste it on `.env`file
-
-###### step 2: modify .env file
 ```
 username=
 key=
 ```
+
+###### step 2: ported to github repo.secrets
 
 
 ### Project Folder Structure
@@ -79,11 +82,26 @@ python src/inference.py --ckpt_path=/path/model.ckpt --input_folder=/home/path_f
 ```
 
 
-# Tensorboard logs
+# pytest
+- generate xml report for code coverage
 ```sh
-tensorboard --logdir outputs/ --load_fast=false
+coverage run -m pytest
+coverage xml -o coverage.xml
+pytest --cov --cov-report=xml
 ```
 
-```website
-http://localhost:6006/
+# Tensorboard
+```sh
+tensorboard --logdir outputs/ --load_fast=false 
 ```
+
+
+
+# Reports
+- ![Training Details](./reports/train-report.png)
+- ![Testing  Details](./reports/test-report.png)
+- ![Validation Details](./reports/val-report.png)
+- ![learning reate](./reports/lr-Adam.png)
+
+# Workflow
+![workflows](./reports/ci-workflows.png)
