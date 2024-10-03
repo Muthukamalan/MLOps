@@ -3,7 +3,7 @@
 - [X]	**Docker - I**	A hands-on session on creating Docker containers from scratch and an introduction to Docker, the containerization platform, and its core concepts.
 - [X]	**Docker - II**	An introduction to Docker Compose, a tool for defining and running multi-container Docker applications, with a focus on deploying machine learning applications.
 - [X]	**PyTorch Lightning - I**	An overview of PyTorch Lightning, a PyTorch wrapper for high-performance training and deployment of deep learning models, and a project setup session using PyTorch Lightning.
-- [ ]	**PyTorch Lightning - II**	Learn to build sophisticated ML projects effortlessly using PyTorch Lightning and Hydra, combining streamlined development with advanced functionality for seamless model creation and deployment.
+- [X]	**PyTorch Lightning - II**	Learn to build sophisticated ML projects effortlessly using PyTorch Lightning and Hydra, combining streamlined development with advanced functionality for seamless model creation and deployment.
 - [ ]	**Data Version Control (DVC)**	Data Version Control (DVC), a tool for managing machine learning data and models, including versioning, data and model management, and collaboration features.
 - [ ]	**Experiment Tracking & Hyperparameter Optimization**	A session covering various experiment tracking tools such as Tensorboard, MLFlow and an overview of Hyperparameter Optimization techniques using Optuna and Bayesian Optimization.
 - [ ]	**AWS Crash Course**	A session on AWS, covering EC2, S3, ECS, ECR, and Fargate, with a focus on deploying machine learning models on AWS.
