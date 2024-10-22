@@ -1,0 +1,11 @@
+defaults:
+  - db: mysql
+  - _self_
+  
+
+hydra:
+  sweeper:
+    params:
+      db: glob(*)
+      +x: choice(-5, 0, 5)
+      # db.timeout: 5,10
