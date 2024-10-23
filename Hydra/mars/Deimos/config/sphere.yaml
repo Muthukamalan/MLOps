@@ -20,7 +20,7 @@ hydra:
       y: choice(5,0,-.6)
       task: range(10,15)
 
-
+# bool,choice,float,glob,int,interval,range,shuffle,sort,str,tag
 # run without -m flag `sweeper` won't call
 x: 1
 y: 1

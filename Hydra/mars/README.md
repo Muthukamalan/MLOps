@@ -31,3 +31,6 @@ hydra-optuna-sweeper==1.2.0
 Demios:
 - launcher: joblib
 - sweeper: optuna
+
+
+<!-- bool,choice,float,glob,int,interval,range,shuffle,sort,str,tag -->
