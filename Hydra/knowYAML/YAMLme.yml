@@ -1,0 +1,154 @@
+###############################################
+#               YAML
+#
+# super set of python, it is a data serialisation
+# language designed to be directly write and read
+#
+# if not meant to be read, .proto (protobuf) choice to go
+###############################################
+
+
+# root Object (which continues for the entire document) like dict in py3
+
+################
+# Scaler Types
+################
+key:  value                 # string don't need to quoated
+number: 1                   # interpret as a number, not a boolean
+float_number: .03
+scientific_number: 1e-3
+hex_number: 0x123
+octal_number: 0123
+key with space: possible
+
+
+boolean_type: true
+is_boolean: yes
+is me boolean: "yes"
+is me boolean again: YES
+another_boolean: false  # no, NO, "no"
+
+null_value: null
+another_null_value: ~
+
+string_with_quaotes: what about me':' in the value
+
+Superscript two: \u00B2     # UTF-8/16/32 characters need to be encoded
+
+special_char: "[ John ] & { Jane } - <is married?>"
+
+literal_block: |
+  This entire block of text will be value with line breaks preserved.
+  -   This is line one
+  -   This is line second
+folded_block: >
+  This entire block of text will be the value of 'folded_style', but this
+    time, all newlines will be replaced with a single space.
+
+    Blank lines, like above, are converted to a newline character.
+
+        'More-indented' lines keep their newlines, too -
+        this text will appear over two lines.
+literal_strip: |-
+  This entire block of text will be the value of the 'literal_strip' key,with trailing blank line being stripped.
+  |+ will keep trailinng blank line
+block_strip: >-
+  This entire block of text will be the value of 'block_strip', but this
+  time, all newlines will be replaced with a single space and
+  trailing blank line being stripped.
+  >+ will keep trailinng blank line
+
+
+
+################
+# Collection
+################
+
+a_nested_map:
+    key: val
+    another:
+      yup: true
+    0.25: you too bro
+
+
+? |
+  am i comple key
+  to understand
+: True
+
+
+
+# allows mappig between seq  to seq  (pyyaml not able to parse it)
+# ? - handball
+#   - volleyball
+# : [ 2001-01-01, 2002-02--01 ]
+
+
+# # sequence like list
+a_sequence:
+  - 2
+  - .3
+  - 1e-6
+  - ditch me : no
+    haha: lol
+  - - This is a sequence
+    - inside another sequence
+  - - - nested sequence indiator
+      - cann't be tamed
+
+# JSON like
+json_map: {'key':'value'}   
+json_seq: [3,2,1, "takeoff", {json_key: okay}]
+
+
+#######################
+# EXTRA YAML TYPES    #
+#######################
+# !![typeName] [value]
+explicites:
+- explicit_boolean: !!bool Yes
+- explicit_int: !!int 42
+- explicit_float: !!float -42.24
+- explicit_string: !!str 0.5
+- explicit_datetime: !!timestamp 2022-11-17 12:34:56.78 +9
+- explicit_null: !!null null
+# - python_complex_number: !!python/complex 1+2j
+
+datetime_canonical: 2001-12-15T02:59:43.1Z
+datetime_space_separated_with_time_zone: 2001-12-14 21:59:43.10 -5
+date_implicit: 2002-12-14
+date_explicit: !!timestamp 2002-12-14
+gif_file: !!binary |
+  R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5
+  OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+
+  +f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC
+  AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=
+
+
+set_vals:
+  ? item0
+  ? item2
+  ? item3
+or: { item1, item2, item3 }
+
+
+
+
+#######################
+# EXTRA YAML FEATURES #
+#######################
+
+# let easily duplicate cotent across your docs
+anchored_content: &anchor_name This string will appear as the value of two keys.
+other_anchor: *anchor_name
+
+base: &base 
+  name: kakashi
+
+foo:
+  <<: *base 
+  age: 24      # if there no don't make scene
+  name: harrison
+bar:
+  <<: *base    # if not append
+  job: remote  
