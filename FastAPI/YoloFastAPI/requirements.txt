@@ -5,3 +5,7 @@ pydantic==2.9.2
 Pillow==10.1.0
 fastapi
 uvicorn==0.32.0
+wsproto==1.2.0
+trio-websocket==0.11.1
+websocket-client==1.8.0
+websockets==11.0.3
