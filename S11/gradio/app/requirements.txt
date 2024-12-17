@@ -1,0 +1,5 @@
+gradio==4.44.1
+
+# aws-cli-stack-requires
+aws-cdk-lib==2.170.0
+constructs>=10.0.0,<11.0.0
