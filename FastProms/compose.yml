@@ -1,0 +1,41 @@
+# version: '2'
+# services:
+#   coin-api:
+#     container_name: coin-api
+#     build: 
+#       context: .
+#       dockerfile: ./Dockerfile
+#     restart: on-failure
+#     ports:
+#       - 5000:5000
+#   prometheus:
+#     image: prom/prometheus:latest
+#     restart: always
+#     volumes:
+#       - ./prometheus.yml:/etc/prometheus/prometheus.yml 
+#     command: --web.enable-lifecycle --config.file=/etc/prometheus/prometheus.yml 
+#       # - '--config.file=/etc/prometheus/prometheus.yml'
+#     ports:
+#       - 9090:9090
+
+version: '2'
+services:
+  coin-api:
+    container_name: coin-api
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    ports:
+      - 5000:5000
+
+  prometheus:
+    image: prom/prometheus:latest
+    restart: always
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - "--web.enable-lifecycle"
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    ports:
+      - 9090:9090
