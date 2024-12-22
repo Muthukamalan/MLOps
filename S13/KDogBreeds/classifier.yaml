@@ -1,0 +1,62 @@
+# Deployment
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name:  classifier-deployment
+    labels:
+        app: classifier
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            app: classifier
+    template:
+        metadata:
+            labels:
+                app: classifier
+        spec:
+            containers:
+                - name: classifier
+                  image: muthukamalan/classifier-k8s
+                  ports:
+                  - containerPort: 8080
+---
+# Service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+    name: classifier-service
+spec:
+    selector:
+        app: classifier
+    ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+    type: LoadBalancer
+
+---
+
+# INGRESS
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: classifier-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: earth.localhost
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: classifier-service
+                port:
+                  number: 80
+
