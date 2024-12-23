@@ -37,3 +37,9 @@ for i in {1..35}; do curl http://earth.localhost/health; done | awk '{gsub(/}{/,
 # get all logs
 mkubectl delete -f classifier.yaml
 ```
+
+
+# Expose to Earth
+```bash
+ssh -R 80:earth.localhost:80 nokey@localhost.run
+```
