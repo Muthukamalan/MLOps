@@ -1,0 +1,7 @@
+FROM node:23.4.0-bookworm-slim
+WORKDIR /home/code
+COPY package.json .
+RUN npm install
+COPY . .
+EXPOSE 8079
+CMD [ "npm", "run", "dev" ]

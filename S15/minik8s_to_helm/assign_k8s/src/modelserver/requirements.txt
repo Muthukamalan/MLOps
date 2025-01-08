@@ -1,0 +1,5 @@
+fastapi[all]==0.115.6
+requests
+pillow==11.0.0
+onnxruntime==1.19.2
+psutil==6.1.1

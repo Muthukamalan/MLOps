@@ -1,0 +1,1 @@
+http://modelserver/ping => {'status':'Healthy'}

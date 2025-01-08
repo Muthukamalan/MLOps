@@ -1,0 +1,16 @@
+{ 
+    "name": "nextjs Development",
+    "image": "node:23.4.0-bookworm-slim",
+    "forwardPorts": [
+        80
+    ]
+    // ,
+    // "customizations": {
+    //     "vscode": {
+    //         "extensions": [
+    //             // "rust-lang.rust-analyzer"
+    //             // "vscjava.vscode-java-pack"
+    //         ]
+    //     }
+    // }
+}
